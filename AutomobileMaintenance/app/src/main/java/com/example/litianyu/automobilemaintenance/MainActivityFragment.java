@@ -7,7 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 
@@ -24,16 +25,16 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        Button SETUP = (Button)rootView.findViewById(R.id.button);
+        ImageButton SETUP = (ImageButton)rootView.findViewById(R.id.Button);
         SETUP.setOnClickListener(this);
 
-        Button MAINT = (Button)rootView.findViewById(R.id.button2);
+        ImageButton MAINT = (ImageButton)rootView.findViewById(R.id.Button2);
         MAINT.setOnClickListener(this);
 
-        Button REMIND = (Button)rootView.findViewById(R.id.button3);
+        ImageButton REMIND = (ImageButton)rootView.findViewById(R.id.Button3);
         REMIND.setOnClickListener(this);
 
-        Button DIAL = (Button)rootView.findViewById(R.id.button4);
+        ImageButton DIAL = (ImageButton)rootView.findViewById(R.id.Button4);
         DIAL.setOnClickListener(this);
 
         return rootView;
@@ -44,19 +45,19 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
 
 
         switch(v.getId()){
-            case R.id.button:
+            case R.id.Button:
                 final Intent activitysetup = new Intent(getActivity(),setup.class);
                 startActivity(activitysetup);
                 break;
-            case R.id.button2:
-                final Intent activitymaint = new Intent(getActivity(),MainActivity.class);
+            case R.id.Button2:
+                final Intent activitymaint = new Intent(getActivity(),automain.class);
                 startActivity(activitymaint);
                 break;
-            case R.id.button3:
+            case R.id.Button3:
                 final Intent activityremind = new Intent(getActivity(),remainder.class);
                 startActivity(activityremind);
                 break;
-            case R.id.button4:
+            case R.id.Button4:
                 final Intent activityintent = new Intent(getActivity(),quickdial.class);
                 startActivity(activityintent);
                 break;
