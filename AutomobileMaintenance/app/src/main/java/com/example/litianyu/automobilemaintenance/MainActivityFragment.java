@@ -2,6 +2,7 @@ package com.example.litianyu.automobilemaintenance;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -58,8 +59,9 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                 startActivity(activityremind);
                 break;
             case R.id.Button4:
-                final Intent activityintent = new Intent(getActivity(),quickdial.class);
-                startActivity(activityintent);
+                final Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+                dialIntent.setData(Uri.parse("tel:2127651234"));
+                startActivity(dialIntent);
                 break;
         }
     }
