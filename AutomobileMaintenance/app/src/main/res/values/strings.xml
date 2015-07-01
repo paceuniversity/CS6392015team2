@@ -6,4 +6,7 @@
     <string name="title_activity_automain">automain</string>
     <string name="title_activity_remainder">remainder</string>
     <string name="title_activity_quickdial">quickdial</string>
+    <string name="Reminder_text">Reminder</string>
+    <string name="Reminder_save">Save</string>
+    <string name="Reminder_instruct">Please select a date and then enter a description for your reminder.  You will be prompted with you reminder on the date that you set.</string>
 </resources>
