@@ -6,4 +6,7 @@
     <string name="title_activity_automain">automain</string>
     <string name="title_activity_remainder">remainder</string>
     <string name="title_activity_quickdial">quickdial</string>
+    <string name="make_text">Make:</string>
+    <string name="model_text">Model:</string>
+    <string name="year_text">Year:</string>
 </resources>
