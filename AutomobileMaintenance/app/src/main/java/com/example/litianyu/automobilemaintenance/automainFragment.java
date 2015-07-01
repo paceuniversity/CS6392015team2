@@ -27,7 +27,7 @@ public class automainFragment extends Fragment {
         View rootView=inflater.inflate(R.layout.fragment_automain,container,false);
         String[] maintenance ={
                 "oil change: 06/29/2015",
-                "engire check: 03/15/2013",
+                "engine check: 03/15/2013",
                 "replace tires: 05/18/2015",
                 "check lights: 06/29/2015"
         };
