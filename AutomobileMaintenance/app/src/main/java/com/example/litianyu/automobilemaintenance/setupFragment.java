@@ -24,7 +24,7 @@ import java.net.URL;
  *
  * and then put the downloaded image into the xml imageView called viewImage
  */
-public class setupFragment extends Fragment  {
+public class setupFragment extends Fragment implements View.OnClickListener {
 
     public setupFragment() {
     }
@@ -33,9 +33,21 @@ public class setupFragment extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        View rootView = inflater.inflate(R.layout.fragment_setup, container, false);
+
+        Button remote_image_button = (Button)rootView.findViewById(R.id.remote_image);
+        remote_image_button.setOnClickListener(this);
 
 
-        return inflater.inflate(R.layout.fragment_setup, container, false);
+        return rootView;
+    }
+
+
+    public void onClick(View v) {
+
+        ImageDownloader imageDownloader = new ImageDownloader();
+        imageDownloader.execute("https://raw.githubusercontent.com/paceuniversity/CS6392015team2/master/chrysler.png");
+
     }
 
 
